@@ -12,8 +12,8 @@ import javax.persistence.Table;
 public class Music {
         
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name="track_id")
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        @Column(name="auto_id")
             private Long id;
         
         @Column(name="Name")
@@ -32,9 +32,9 @@ public class Music {
 			return id;
 		}
 
-		public void setId(Long id) {
-			this.id = id;
-		}
+		//public void setId(long i) {
+			//this.id = i;
+		//}
 
 		public String getName() {
 			return Name ;
@@ -85,6 +85,12 @@ public class Music {
 
 		public Music() {
 			super();
+		}
+
+		public void setId(long i) {
+		this.id = i;
+			// TODO Auto-generated method stub
+			
 		}
         
         
